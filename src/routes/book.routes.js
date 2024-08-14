@@ -1,9 +1,13 @@
 const express = require('express');
 const router = express.Router();
+const verifyUser = require('../middleware/auth');
 
-const getAllBookHandler = require('../controller/book.controller');
+const bookController = require('../controller/book.controller');
 
-// Get all books with search and filtering
-router.get('/').get(getAllBookHandler);
+const {createNewBookHandler, getAllBookHandler} = bookController;
+
+router.route("/").post(verifyUser, createNewBookHandler);
+
+router.route("/").get(verifyUser, getAllBookHandler);
 
 module.exports = router;

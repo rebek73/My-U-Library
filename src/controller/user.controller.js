@@ -1,4 +1,4 @@
-const User = require('../models/user.model'); // Import the correct model
+const User = require('../models/user.model'); 
 
 const getAllUserHandler = async (req, res) => {
         try{

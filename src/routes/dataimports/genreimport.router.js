@@ -1,6 +1,6 @@
 const express = require('express');
-const Genre = require('../models/genre.model');
-const genres = require('../data/genre');
+const Genre = require('../../models/genre.model');
+const genres = require('../../data/genre');
 
 const router = express.Router();
 

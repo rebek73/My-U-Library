@@ -3,16 +3,19 @@ const mongoose = require('mongoose');
 
 const connectDB = require('./config/database');
 
-const bookData = require('./routes/dataimport.router');
-const genreData = require('./routes/genreimport.router');
-const userData = require('./routes/userimport.router');
+const bookData = require('./routes/dataimports/dataimport.router');
+const genreData = require('./routes/dataimports/genreimport.router');
+const userData = require('./routes/dataimports/userimport.router');
 
 const bookRouter = require('./routes/book.routes');
 const genreRouter = require('./routes/genre.routes');
 const userRouter = require('./routes/user.routes');
-const checkoutRouter = require('./routes/checkout.routes');
+
 // to check one single book detail
 const singleBookRouter = require('./routes/singlebook.router')
+const singleGenreRouter = require('./routes/singlegenre.router')
+const singleUserRouter = require('./routes/singleuser.router')
+
 // to auth user by email and password
 const authRouter = require('./routes/auth.routes');
 
@@ -35,9 +38,12 @@ app.use('/api/userdata', userData);
 
 app.use('/api/books', bookRouter);
 app.use('/api/books', singleBookRouter);
+
 app.use('/api/genres', genreRouter);
+app.use('/api/genres', singleGenreRouter);
+
 app.use('/api/users', userRouter);
-app.use('/api/checkouts', checkoutRouter);
+app.use('/api/users', singleUserRouter);
 
 app.use('/api/auth', authRouter);
 

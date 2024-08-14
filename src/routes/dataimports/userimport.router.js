@@ -1,6 +1,6 @@
 const express = require('express');
-const User = require('../models/user.model');
-const users = require('../data/user');
+const User = require('../../models/user.model');
+const users = require('../../data/user');
 
 const router = express.Router();
 
@@ -14,6 +14,5 @@ router.route("/").post(async (req, res) => {
         res.json({message: 'Could not add users to the database'});
     }
 })
-
 
 module.exports = router;

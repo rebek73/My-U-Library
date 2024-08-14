@@ -4,37 +4,33 @@ const users = {
     "data": [
         {
             id: uuid(),
-            firstName: "John",
-            lastName: "Doe",
-            email: "johndoe@example.com",
-            password: "password123",
-            role: "Student"
-        },
-        {
             firstName: "Jane",
             lastName: "Smith",
-            email: "janesmith@example.com",
+            email: "janesmith73@example.com",
             password: "password456",
             role: "Student"
         },
         {
+            id: uuid(),
             firstName: "Michael",
             lastName: "Johnson",
-            email: "michaeljohnson@example.com",
+            email: "michaeljohnson42@example.com",
             password: "password789",
             role: "Student"
         },
         {
+            id: uuid(),
             firstName: "Emily",
             lastName: "Brown",
-              email: "emilybrown@example.com",
+              email: "emilybrown63@example.com",
             password: "password101",
             role: "Student"
         },
         {
+            id: uuid(),
             firstName: "David",
             lastName: "Miller",
-            email: "davidmiller@example.com",
+            email: "davidmiller54@example.com",
             password: "password111",
             role: "Librarian"
         }
