@@ -7,10 +7,10 @@ const checkoutSchema = new mongoose.Schema({
   returnDate: { type: Date },
   bookTitle: { type: String, required: true },
   bookAuthor: { type: String, required: true },
-  userFirstName: { type: String, required: true },
-  userLastName: { type: String, required: true }
+  firstName: { type: String, required: true },
+  lastName: { type: String, required: true }
 });
 
 const Checkout = mongoose.model('Checkout', checkoutSchema);
 
-export default Checkout;
+module.exports = Checkout;
