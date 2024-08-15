@@ -1,13 +1,15 @@
 const express = require('express');
 const router = express.Router();
-const verifyUser = require('../middleware/auth');
+const auth = require('../middleware/auth');
 
 const bookController = require('../controller/book.controller');
 
-const {createNewBookHandler, getAllBookHandler} = bookController;
+const { createNewBookHandler, getAllBookHandler } = bookController;
 
-router.route("/").post(verifyUser, createNewBookHandler);
+// to create or add new book
+router.route("/", auth).post(createNewBookHandler);
 
-router.route("/").get(verifyUser, getAllBookHandler);
+// to get the whole list of books
+router.route("/", auth).get(getAllBookHandler);
 
 module.exports = router;

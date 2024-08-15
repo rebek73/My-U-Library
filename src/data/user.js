@@ -22,7 +22,7 @@ const users = {
             id: uuid(),
             firstName: "Emily",
             lastName: "Brown",
-              email: "emilybrown63@example.com",
+            email: "emilybrown63@example.com",
             password: "password101",
             role: "Student"
         },

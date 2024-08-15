@@ -2,11 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 const connectDB = require('./config/database');
-
-const bookData = require('./routes/dataimports/dataimport.router');
-const genreData = require('./routes/dataimports/genreimport.router');
-const userData = require('./routes/dataimports/userimport.router');
-
+//
 const bookRouter = require('./routes/book.routes');
 const genreRouter = require('./routes/genre.routes');
 const userRouter = require('./routes/user.routes');
@@ -32,10 +28,6 @@ app.get("/", (req, res) => {
 })
 
 // routes 
-app.use('/api/bookdata', bookData);
-app.use('/api/genredata', genreData);
-app.use('/api/userdata', userData);
-
 app.use('/api/books', bookRouter);
 app.use('/api/books', singleBookRouter);
 
