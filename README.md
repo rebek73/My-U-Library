@@ -14,4 +14,4 @@ A small university library system where students can check out physical books.
 
 **Link to collection**
 
-https://elements.getpostman.com/redirect?entityId=13491558-9f7257b7-23fc-41e2-b9b6-166d10d89f12&entityType=collection
+[https://elements.getpostman.com/redirect?entityId=13491558-9f7257b7-23fc-41e2-b9b6-166d10d89f12&entityType=collection](https://elements.getpostman.com/redirect?entityId=13491558-482c1389-d679-44fa-9ab0-dfc05344c2d5&entityType=collection)
